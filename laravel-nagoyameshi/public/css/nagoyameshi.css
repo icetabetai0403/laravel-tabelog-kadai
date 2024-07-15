@@ -1,0 +1,1037 @@
+body {
+    background-color: #f8fafc;
+    font-family: "メイリオ", "Meiryo", "Hiragino Kaku Gothic ProN",
+        "ヒラギノ角ゴ ProN W3", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.11px;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.13px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.04px;
+}
+
+big {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.08px;
+}
+
+caption {
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.08px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #191919;
+}
+
+.nagoyameshi-login-input {
+    border-radius: 2px;
+    border: solid 1px #b2b2b2;
+    background-color: #ffffff;
+}
+
+.nagoyameshi-check-label {
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.nagoyameshi-require-input-label {
+    border-radius: 1px;
+    background-color: #e2001b;
+}
+
+.nagoyameshi-require-input-label-text {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.nagoyameshi-submit-button {
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    background-color: #c44646;
+}
+
+.nagoyameshi-submit-button:hover {
+    color: #ffffff;
+    background-color: #c44646;
+    opacity: 0.7;
+}
+
+.nagoyameshi-login-text {
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #c44646;
+}
+
+.nagoyameshi-login-text:hover {
+    color: #ea9595;
+}
+
+:root {
+    --header-height: 60px;
+}
+
+.nagoyameshi-header-container {
+    height: var(--header-height);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.nagoyameshi-header-search-input {
+    border: solid 1px #e5e5e5;
+}
+
+.nagoyameshi-header-search-button {
+    background-color: #c44646;
+    margin-left: 10px;
+}
+
+.nagoyameshi-header-search-button:hover {
+    background-color: #c44646;
+    opacity: 0.7;
+}
+
+.nagoyameshi-header-search-icon {
+    color: #ffffff;
+}
+
+.nagoyameshi-header-fav-icon {
+    color: #191919;
+}
+
+.nagoyameshi-favorite-button,
+.nagoyameshi-favorite-reservation {
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    background-color: #c44646;
+}
+
+.nagoyameshi-favorite-button:hover,
+.nagoyameshi-favorite-reservation:hover {
+    background-color: #c44646;
+    opacity: 0.7;
+    color: #ffffff;
+}
+
+.text-favorite,
+.text-reservation {
+    color: #ffffff;
+}
+
+.review-score-color {
+    color: #c44646;
+}
+
+.review-score-color:focus {
+    color: #c44646;
+}
+
+.nagoyameshi-sidebar-category-label {
+    width: 156px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #191919;
+}
+
+/* 星評価 */
+.nagoyameshi-star-rating {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    color: #cccccc;
+    white-space: nowrap;
+}
+
+.nagoyameshi-star-rating::before,
+.nagoyameshi-star-rating::after {
+    content: "★★★★★";
+}
+
+.nagoyameshi-star-rating::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    color: #c44646;
+    white-space: nowrap;
+}
+
+.nagoyameshi-star-rating[data-rate="5"]::after {
+    width: 100%;
+}
+
+.nagoyameshi-star-rating[data-rate="4.5"]::after {
+    width: 90%;
+}
+
+.nagoyameshi-star-rating[data-rate="4"]::after {
+    width: 80%;
+}
+
+.nagoyameshi-star-rating[data-rate="3.5"]::after {
+    width: 70%;
+}
+
+.nagoyameshi-star-rating[data-rate="3"]::after {
+    width: 60%;
+}
+
+.nagoyameshi-star-rating[data-rate="2.5"]::after {
+    width: 50%;
+}
+
+.nagoyameshi-star-rating[data-rate="2"]::after {
+    width: 40%;
+}
+
+.nagoyameshi-star-rating[data-rate="1.5"]::after {
+    width: 30%;
+}
+
+.nagoyameshi-star-rating[data-rate="1"]::after {
+    width: 20%;
+}
+
+.nagoyameshi-star-rating[data-rate="0.5"]::after {
+    width: 10%;
+}
+
+.nagoyameshi-star-rating[data-rate="0"]::after {
+    width: 0%;
+}
+
+.store-image img {
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .store-image img {
+        max-height: 200px;
+    }
+
+    .reviews {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+
+.store-rating {
+    font-size: 24px;
+}
+
+.store-rating .nagoyameshi-star-rating {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.reviews {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.review-form {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-form .form-group {
+    margin-bottom: 20px;
+}
+
+.review-form label {
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.text-muted {
+    font-size: 12px;
+}
+
+hr {
+    border-top: 2px solid #9c9c9c;
+}
+
+.store-details th {
+    width: 30%;
+    background-color: #e3d1d1;
+    color: black;
+}
+
+.store-details td {
+    background-color: #ffffff;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.content-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar-row {
+    flex: 1;
+    width: 100%;
+}
+
+.sidebar-wrapper {
+    position: sticky;
+    top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    padding-top: 0;
+}
+
+.sidebar-container {
+    height: 100%;
+}
+
+.main-content {
+    min-height: calc(100vh - var(--header-height));
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sidebar-categories {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-item {
+    margin-bottom: 5px;
+}
+
+.category-link {
+    display: block;
+    padding: 5px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.category-link:hover {
+    background-color: #f0f0f0;
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+}
+
+.fa-user,
+.fa-heart {
+    margin-right: 7px;
+}
+
+.nagoyameshi-require-input-label {
+    border-radius: 5px;
+    background-color: #e2001b;
+    padding: 2px 5px;
+    margin-left: 8px;
+}
+
+.login-container {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nagoyameshi-login-input {
+    margin-bottom: 15px;
+}
+
+.recommend-store-image {
+    width: 100%;
+    height: 280px; /* おすすめ店舗の画像の高さ */
+    object-fit: cover;
+}
+
+.new-store-image {
+    width: 100%;
+    height: 200px; /* 新着店舗の画像の高さ */
+    object-fit: cover;
+}
+
+.store-link:hover img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nagoyameshi-store-label-link {
+    margin-bottom: 0;
+}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+.store-image {
+    width: 100%;
+    height: 200px; /* 適切な高さに調整してください */
+    object-fit: cover;
+}
+
+.store-link:hover img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nagoyameshi-store-label {
+    margin-bottom: 20px; /* 商品間の余白を確保 */
+}
+
+::placeholder {
+    color: #b6b6b6 !important; /* 薄い灰色の例 */
+    opacity: 1; /* Firefox用 */
+}
+
+.review-image {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.review-content {
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.btn {
+    margin-right: 0.5rem;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.recommend-store-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#recommendedStoresCarousel {
+    margin-bottom: 20px;
+}
+
+.store-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nagoyameshi-store-label-link,
+.nagoyameshi-store-label {
+    margin-bottom: 0;
+}
+
+.carousel-custom-indicators {
+    margin-bottom: 30px;
+}
+
+.carousel-custom-indicators .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.carousel-custom-indicators .dot.active,
+.carousel-custom-indicators .dot:hover {
+    background-color: #c44646;
+}
+
+.pagination .page-link {
+    color: #c44646; /* テキスト色をメインカラーに */
+    background-color: white; /* 背景色を白に */
+    border: 1px solid #ea9595; /* ボーダーをメインカラーに */
+    margin: 0 5px; /* ボタン間の余白を追加 */
+    padding: 10px 15px; /* クリックしやすいようにパディングを追加 */
+    transition: background-color 0.3s, color 0.3s; /* スムーズな変化のためのトランジション */
+}
+
+.pagination .page-link:hover {
+    background-color: #ea9595; /* ホバー時の背景色をメインカラーに */
+    color: white; /* テキスト色を白に */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #c44646; /* アクティブなページの背景色をメインカラーに */
+    color: white; /* テキスト色を白に */
+    border: 1px solid #c44646; /* ボーダーをメインカラーに */
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #cccccc; /* 無効なボタンのテキスト色を灰色に */
+    background-color: white; /* 背景色を白に */
+    border: 1px solid #cccccc; /* ボーダーを灰色に */
+}
+
+.favorite-store-image-wrapper {
+    width: 100%;
+    max-width: 150px; /* 画像の最大幅を150pxに */
+    padding-top: 84.375px; /* 150pxの56.25%、16:9のアスペクト比を維持 */
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto; /* 中央寄せ */
+}
+
+.favorite-store-image-wrapper a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.favorite-store-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-store-image-wrapper:hover .favorite-store-image {
+    opacity: 0.7; /* 透明度を下げる */
+}
+
+.favorite-store-rating {
+    font-size: 0.9em;
+}
+
+.nagoyameshi-btn-danger {
+    background-color: #626262;
+    color: #ffffff;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: bold;
+}
+
+.nagoyameshi-btn-danger:hover {
+    background-color: #ababab;
+}
+
+.nagoyameshi-favorite-item-text {
+    color: inherit;
+    text-decoration: none;
+}
+
+.store-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.btn-change {
+    background-color: #d8af76;
+    color: #ffffff;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-change:hover {
+    background-color: #decfbf;
+}
+
+/* 新しいクラス */
+.d-flex.align-items-center a.btn {
+    margin-right: 0.5rem; /* ボタン間のスペースを調整 */
+}
+
+.area-cards-container .area-card {
+    height: 100px; /* カードの高さを固定 */
+    overflow: hidden;
+}
+
+.area-cards-container .area-card:hover .area-image,
+.area-cards-container .area-card:hover .card-body {
+    opacity: 0.7; /* 透明度を下げる */
+}
+
+.area-cards-container .area-image-wrapper {
+    width: 100%;
+    height: 100px; /* カードと同じ高さに設定 */
+    overflow: hidden;
+    position: relative;
+}
+
+.area-cards-container .area-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像比率を保ちながら領域を埋める */
+}
+
+.area-cards-container .card-body {
+    padding: 0.5rem; /* カード内のパディングを調整 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.area-cards-container .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.area-cards-container .card-text {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+}
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+.menu-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.icon-wrapper {
+    flex-shrink: 0;
+    width: 60px; /* アイコンの幅を固定 */
+    text-align: center;
+}
+
+.arrow-wrapper {
+    flex-shrink: 0;
+    width: 30px; /* 矢印の幅を固定 */
+    text-align: center;
+}
+
+.menu-content label {
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-content p {
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-link:hover {
+    background-color: #ea9595;
+}
+
+.user-info {
+    border: 2px solid #c44646;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.user-info h2 {
+    margin-bottom: 10px;
+}
+
+.user-info p {
+    margin-bottom: 0;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+/* ヘッダーのスタイル調整 */
+.nagoyameshi-header-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* 検索フォームのスタイル調整 */
+@media (max-width: 767.98px) {
+    .navbar-nav .nav-item:first-child {
+        width: 100%;
+    }
+}
+
+/* ハンバーガーメニューのスタイル調整 */
+@media (max-width: 767.98px) {
+    .sticky-top-mobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    body {
+        padding-top: var(--header-height);
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background-color: #ffffff;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        transform: translateX(100%);
+        opacity: 0;
+        overflow-y: auto;
+    }
+
+    .navbar-collapse.show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1em;
+        padding: 10px 0;
+    }
+}
+
+/* PCサイズでは固定を解除 */
+@media (min-width: 768px) {
+    .sticky-top-mobile {
+        position: static;
+    }
+
+    body {
+        padding-top: 0;
+    }
+}
+
+/* ロゴのスタイル調整 */
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+
+/* ハンバーガーメニュー内の不要な<hr>を非表示 */
+@media (max-width: 767.98px) {
+    hr {
+        opacity: 0;
+    }
+
+    .navbar-nav > hr {
+        opacity: 0.25;
+    }
+}
+
+/* マイページのメニューアイテムのスタイル調整 */
+@media (max-width: 575.98px) {
+    .menu-link {
+        padding: 10px;
+    }
+
+    .icon-wrapper {
+        width: 40px;
+    }
+
+    .icon-wrapper i {
+        font-size: 1.5em;
+    }
+
+    .menu-content label {
+        font-size: 0.9em;
+    }
+
+    .menu-content p {
+        font-size: 0.8em;
+    }
+
+    .arrow-wrapper {
+        width: 20px;
+    }
+
+    .arrow-wrapper i {
+        font-size: 1.2em;
+    }
+}
+
+/* お気に入りページのレスポンシブ対応 */
+@media (max-width: 767.98px) {
+    .favorite-container {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 20px; /* 店舗ごとに余白を追加 */
+        border-bottom: 1px solid #ccc; /* 区切り線を追加 */
+        padding-bottom: 20px; /* 区切り線上部に余白を追加 */
+    }
+
+    .favorite-container .row {
+        flex-direction: column;
+    }
+
+    .favorite-container .col-md-3,
+    .favorite-container .col-md-9 {
+        width: 100%;
+    }
+
+    .favorite-container .d-flex {
+        justify-content: center;
+    }
+
+    .favorite-store-image-wrapper {
+        width: 100%;
+        padding-top: 56.25%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .favorite-store-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* 予約一覧ページのレスポンシブ対応 */
+@media (max-width: 767.98px) {
+    .reservation-container {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 20px; /* 予約ごとに余白を追加 */
+        border-bottom: 1px solid #ccc; /* 区切り線を追加 */
+        padding-bottom: 20px; /* 区切り線上部に余白を追加 */
+    }
+
+    .reservation-container .row {
+        flex-direction: column;
+    }
+
+    .reservation-container .col-md-2,
+    .reservation-container .col-md-3,
+    .reservation-container .col-md-4 {
+        width: 100%;
+    }
+
+    .reservation-container .d-flex {
+        justify-content: center;
+    }
+
+    .reservation-store-image-wrapper {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .favorite-store-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* 既存のスタイルに追加 */
+
+@media (max-width: 767.98px) {
+    .sidebar-wrapper {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-collapse .humberger-categories .sidebar-title {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .navbar-collapse .humberger-categories .category-list {
+        padding-left: 20px;
+    }
+
+    .navbar-collapse .humberger-categories .category-item {
+        list-style-type: none;
+    }
+
+    .navbar-collapse .humberger-categories .category-link {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+    }
+
+    #sort-form > div > div {
+        margin-bottom: 10px;
+    }
+
+    .humberger-categories {
+        margin-bottom: 20px;
+    }
+
+    .store-sort {
+        flex-flow: column;
+    }
+}
